@@ -9,7 +9,7 @@ const result = students.map(e => {
 console.log("Averages:", result);
 
 
-const passed = result.filter(e => e.average >= 50);
+const passed = result.filter(e => e.average > 20);
 console.log("Passed:", passed);
 
 
