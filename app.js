@@ -15,4 +15,21 @@ console.log("Passed:", passed);
 
 console.log("First Student:", students[0].name);
 
+//question2:
 
+
+function getStudentData(success = true) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (success) {
+        resolve("Data received successfully ");
+      } else {
+        reject("Error fetching data ");
+      }
+    }, 1000);
+  });
+}
+
+getStudentData(true)
+  .then(msg => console.log(msg))
+  .catch(err => console.log(err));
